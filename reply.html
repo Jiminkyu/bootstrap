@@ -21,7 +21,7 @@
         border-bottom-right-radius: 2rem;
     }
 
-    .comment {
+    .reply-box {
         border-top-left-radius: 2rem;
         border-bottom-left-radius: 2rem;
     }
@@ -45,6 +45,16 @@
         width: 100%; 
     } 
 
+    .reply-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: .4rem solid lightgray;
+        border-top: 0;
+        border-right: 0;
+        margin-top: 1.5rem;
+        margin-left: 3rem;
+    }
+
     .bi-three-dots {
         color: gray;
     }
@@ -59,7 +69,7 @@
                 </a>
             </div>
             <div class='col-11 mt-3 p-0'>
-                <h3><b>댓글</b></h3>
+                <h3><b>답글</b></h3>
             </div>    
         </nav>
     </div>
@@ -68,28 +78,49 @@
 <body>
 <div class='container'>
 <!--작업은 바디 안에서 -->
-    <div class='row'>
-        <div>
-            <div class='ms-0'><button type='button' class='border-0'><b>User02</b></button>  2023.03.16 10:53:35</div>
-            &nbsp;안녕일세ㅋ ㅋ ㅋ ㅋ ㅋ ㅋ ㅋ ㅋ<br>
-            <button class='reply'>답글</button>
-        </div>
-    </div>
-   <hr>
    <div class='row'>
         <div>
             <div class='ms-0'><button type='button' class='border-0'><b>User03</b></button>  2023.03.16 10:53:35
-                <button type='button'data-bs-target='#fix-del' data-bs-toggle='collapse' class='col-4'>
+                <button type='button'data-bs-target='#fix-del1' data-bs-toggle='collapse' class='col-4'>
                     <i class='bi bi-three-dots fa-2x'></i>
                 </button>
             </div>
-            
             &nbsp;저 10분 정도 늦어요 ㅠㅠ
-            <div id='fix-del' class='collapse'>
+            <div id='fix-del1' class='collapse'>
                 <button class='btn btn-info'>수정</button>
                 <button class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#delModal'>삭제</button>
             </div><br>
-            <button class='reply'>답글 5</button>
+            <input type='button' class='reply' data-bs-target='#reply1' data-bs-toggle='collapse' value='답글 5'/>
+        </div>
+        <div class='row collapse' id='reply1'>
+            <div class='reply-icon'></div>
+            <div class='col-7 mt-5'>
+                <div class='ms-0'><button type='button'><b>User04</b></button>  2023.03.16 00:26:35</div>
+                &nbsp;올때 메로나
+            </div>
+        </div>
+        <div class='row collapse' id='reply1'>
+            <div class='reply-icon'></div>
+            <div class='col-7 mt-5'>
+                <div class='ms-0'><button type='button'><b>User03</b></button>  2023.03.16 00:26:35   
+                        <button type='button'data-bs-target='#fix-del2' data-bs-toggle='collapse'>
+                            <i class='bi bi-three-dots fa-2x'></i>
+                        </button>
+                        <div id='fix-del2' class='collapse'>
+                            <button class='btn btn-info'>수정</button>
+                            <button class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#delModal'>삭제</button>
+                        </div>
+                </div> 
+                &nbsp;메로나 맛있죠!
+            </div>
+        </div>
+        <div class='row collapse' id='reply1'>
+            <div class='reply-icon'></div>
+            <div class='col-8 mt-5'>
+                <div class='ms-0'><button type='button'><b>User04</b></button>  2023.03.16 00:26:35
+                </div>
+                &nbsp; ㅎㅎ 농담이에요~ 이따 봐요!
+            </div>
         </div>
     </div>
 </div>
@@ -98,8 +129,8 @@
     <nav class="navbar fixed-bottom bg-warning pt-0">
         <div class='fw-bold scrolldown'>~~~~~~~~</div>
         <div class='input-group m-2'>
-            <input type='text' class='form-control border-0 comment fa-2x' placeholder='댓글을 입력해주세요' aria-describedby='button-comment'/>
-            <button type='button' class='btn border-0 send' id='button-comment'>
+            <input type='text' class='form-control border-0 reply-box fa-2x' placeholder='답글을 입력해주세요'/>
+            <button type='button' class='btn border-0 send'>
                 <i class='bi bi-arrow-up-circle fa-2x'></i>
             </button>
         </div>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+body {
+    margin: 80px;
+    padding-top : 80px;
+    height: 100%;
+    font-family: 'Noto Sans KR';
+    
+}
+
+p {
+    font-size: 12px;
+}
+ .orange {
+    background-color: orange;
+ }
+
+ .blue {
+    background-color: rgb(151, 190, 69);
+ }
+
+ .gray {
+    background-color: gray;
+ }
+
+ 
