@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="../project.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js'></script>
+<title></title>
+<style>
+    
+</style>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='row d-flex justify-content-end'>
+                <nav class="navbar fixed-top bg-warning">
+                    <a class="navbar-brand" href="#"> </a>
+                    <div class='mt-2 mb-1'>
+                        <span type='button' class="material-symbols-outlined">
+                            campaign
+                        </span>
+                        <span type='button' class="material-symbols-outlined">
+                            notifications
+                        </span>   
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class='container'>
+    <form>
+    <div class='row mt-5 pt-3'>
+        <div class='col'>
+            <div class='mb-3 mt-3 text-center text-secondary'>
+                <h6><b><mark class="bg-orange">
+                    <span id='completionStatus'></span></mark></b>
+                    <span id='meetingTitle'></span>
+                </h6>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col mb-3 align-baseline d-flex justify-content-end' id='meetingWriter'>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col'>
+            <div class='mb-3'>
+                <label for='meetingPlace'>장소</label>
+                <input type='text' class='form-control' name='meetingPlace' id='meetingPlace'/>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col'>
+            <div class='mb-3'>
+                <label for='meetingDateTime'>일시</label>
+                <input type='datetime-local' class='form-control' name='meetingDateTime' id='meetingDateTime'/>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col'>
+            <div class='mb-3'>
+                <div class='progress'>
+                    <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: 0%; font-size: 1rem;'></div>
+                </div>
+            </div>
+        </div>
+        <div class='col-3'>
+            <div class='mb-3 align-baseline d-flex justify-content-end' id='participantStatus'>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col'>
+            <div class='mb-3'>
+                <textarea class='form-control' rows='5' name='meetingContent' id='meetingContent'></textarea>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col'>
+            <div class='d-grid gap-2 d-flex justify-content-end mb-3'>
+                <button type='button' class='btn btn-secondary' id='editBtn'>
+                    수정
+                </button>
+                <button type='button' class='btn btn-secondary' id='deleteBtn'
+                data-bs-toggle="modal" data-bs-target="#modal">
+                    삭제
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col'>
+            <div class='d-grid gap-2 mb-3'>
+                <button type='button' class='btn btn-orange' id='participateBtn'>
+                    참여신청
+                </button>
+            </div>
+        </div>
+    </div>
+    </form>
+    </div>
+    <div class='modal fade' id='modal'>
+        <div class='modal-dialog modal-dialog-centered'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='btn-close' data-bs-dismiss="modal"></button>
+                </div>
+                <div class='modal-body'>
+                    <p id='modalMsg'></p>
+                </div>
+                <div class='modal-footer' id='modalBtn'>
+                    <button type='button' class='btn btn-secondary' id='cancelBtn' data-bs-dismiss="modal">
+                        아니오
+                    </button>
+                    <button type='button' class='btn btn-orange' id='confirmBtn' data-bs-dismiss="modal">네</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <nav class="navbar fixed-bottom bg-warning">
+            <div class="container-fluid pt-3">
+                <div>
+                    <li class="nav-item" type="button">
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+                    </li>
+                </div>
+                <div>
+                    <li class="nav-item" type="button" onclick="location.href='user04.html'">
+                        <span class="material-symbols-outlined">
+                            format_list_bulleted
+                        </span>
+                    </li>
+                </div>
+                <div>
+                    <li class="nav-item" type="button">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                    </li>    
+                </div>
+            </div>
+        </nav>
+    </footer>
+    </body>
+</html>

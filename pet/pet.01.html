@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200' />
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css'>
+<link rel="stylesheet" href="../res/project.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js'></script>
+<script src='//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'></script>
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+<title>회원가입</title>
+<style>
+    .circle{
+        border: .1rem solid gray;
+        background-color: gainsboro;
+        width:150px;
+        height:150px;
+        border-radius: 100px;
+    }
+    #UploadProfileBtn {
+        background-color: lightgray;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+    }
+
+    textarea::placeholder {
+        color: lightgray;
+        text-align: center;
+        padding-top: 15%;
+    }
+    
+    input::placeholder {
+        text-align: center;
+    }
+
+    .btn-orange {
+        color: black;
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    body {
+        margin-block: 80px;
+        padding-top : 60px;
+        height: 100%;
+        font-family: 'Noto Sans KR';
+    }
+
+    
+</style>
+<script>
+    function init() {
+        $('#UploadProfileBtn').click(() => $('#UploadProfile').click())
+
+    }
+    $(init)
+</script>
+</head>
+<header>
+    <nav class='navbar fixed-top bg-muted p-3'>
+        <div class='row'>
+            <div class='col d-flex justify-content-start'>
+                <span type='button' class='material-symbols-outlined' onclick='history.back();'>
+                    arrow_back_ios
+                </span>
+            </div>
+            <div class='col mb-3' style='margin-left: 4.5rem;'>
+                <div class="wrapper d-flex justify-content-end">
+                    <div id="UploadProfileBtn" type='button'>
+                            <i class="fa-solid fa-bone pt-3" style='font-size: 65px;'></i>
+                    </div>
+                </div>
+                <input type='file' id='UploadProfile' hidden>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+<div class='container text-center'>
+
+    <form id='userForm'>
+        <div class='row'>
+            <div class='col'>
+                <input type='text' class='form-control mb-3'  placeholder='펫 이름'>
+            </div>
+        </div>
+        <div class='row mb-1'>
+            <div class='col'>
+                <textarea class='form-control' rows='5' placeholder='펫 소개'></textarea>
+            </div>
+        </div>
+        <div class='col gap-2 d-flex justify-content-end'>
+            <button type='button' class='btn btn-secondary'>
+                <span>추가</span>
+            </button>
+            <button type='button' class='btn btn-secondary' 
+            data-bs-toggle='modal' data-bs-target='#delModal'>                
+                <span>삭제</span>
+            </button>
+        </div>
+    </form>
+    <div class='row mt-3'>
+        <div class='col'>
+            <table class='table'>
+                <tbody class='text-muted'>
+                    <tr><td><input name='pet' type='radio'/></td><td>뽀실이</td></tr>
+                    <tr><td><input name='pet' type='radio'/></td><td>새콤이</td></tr>               
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class='row justify-content-end'>
+        <a href="#joinModal" data-bs-toggle='modal' class='p-0'style='width:100px; height:'>
+                <div><p>회원가입</p></div>
+        </a>
+    </div>
+</div>
+</body>
+  <footer>
+    <nav class="navbar fixed-bottom bg-orange">
+        <div class="container-fluid p-2">
+            <div>
+                <li class="nav-item" type="button">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </li>
+            </div>
+            <div>
+                <li class="nav-item" type="button" onclick="location.href='user04.html'">
+                    <span class="material-symbols-outlined">
+                        format_list_bulleted
+                    </span>
+                </li>
+            </div>
+            <div>
+                <li class="nav-item" type="button">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                </li>    
+            </div>
+        </div>
+    </nav>
+</footer>
+<div class='modal' id='joinModal'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-header'>
+                <button type='button' class='btn-close' data-bs-dismiss='modal'></button>
+            </div>
+            <div class='modal-body'>
+                <p>회원가입 완료! 환영합니다</p>
+            </div>
+            <div class='modal-footer'>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

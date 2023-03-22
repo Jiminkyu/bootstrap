@@ -1,0 +1,38 @@
+@charset "utf-8";
+body {
+    margin: 80px;
+    padding-top : 80px;
+    height: 100%;
+    font-family: 'Noto Sans KR';
+    
+}
+
+ .btn-orange {
+   color: black;
+   background-color: #ffc107;
+   border-color: #ffc107;
+}
+
+.link-black {
+   color: #000;
+}
+
+.link-orange:hover, .link-orange:focus {
+   color: #ffc107;
+}
+
+.bg-orange {
+   background-color: #ffc107 !important;
+}
+
+.table-orange {
+   --bs-table-bg: #ffc107;
+   --bs-table-striped-bg: #ffc107;
+   --bs-table-striped-color: #fff;
+   --bs-table-active-bg: #ffc107;
+   --bs-table-active-color: #fff;
+   --bs-table-hover-bg: #ffc107;
+   --bs-table-hover-color: #fff;
+   color: #fff;
+   border-color: #e6dbb9;
+ }
